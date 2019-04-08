@@ -1,0 +1,60 @@
+{
+	"nodes": {
+		"1": {
+			"mode": "text",
+			"data": "name",
+			"message": "Enter name"
+		},
+		"2": {
+			"mode": "multi",
+			"data": "drink",
+			"message": "Choose drink",
+			"options": [
+				"Coffee",
+				"Tea",
+				"Smoothie"
+			]
+		},
+		"3": {
+			"mode": "text",
+			"data": "items",
+			"message": "Enter Tea name"
+		},
+		"4": {
+			"mode": "text",
+			"data": "items",
+			"message": "Enter Coffee name"
+		},
+		"5": {
+			"mode": "show",
+			"show": ["items"],
+			"message": "Type OK if ok"
+		},
+		"6": {
+			"mode": "end",
+			"message": "Bye!"
+		}
+	},
+	"connections": {
+		"1": [{
+			"node": "2"
+		}],
+		"2": [{
+				"node": "3",
+				"option": "Tea"
+			},
+			{
+				"node": "4",
+				"option": "Coffee"
+			}],
+		"3": [{
+			"node": "5"
+		}],
+		"4": [{
+			"node": "5"
+		}],
+		"5": [{
+			"node": "6"
+		}]
+	}
+}

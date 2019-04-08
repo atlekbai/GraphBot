@@ -1,0 +1,53 @@
+{
+	"nodes": {
+		"1": {
+			"mode": "text",
+			"data": "name",
+			"message": "Enter name"
+		},
+		"2": {
+			"mode": "multi",
+			"data": "drink",
+			"message": "Choose drink",
+			"options": [
+				"Coffee",
+				"Tea",
+				"Smoothie"
+			]
+		},
+		"3": {
+			"mode": "multi",
+			"data": "food",
+			"message": "Choose food",
+			"options": [
+				"BigMac",
+				"Whopper",
+				"BigTasty",
+				"Pizza"
+			]
+		},
+		"4": {
+			"mode": "show",
+			"show": ["drink", "food"],
+			"message": "Your orders"
+		},
+		"5": {
+			"mode": "end",
+			"message": "Bye!"
+		}
+	},
+	"connections": {
+		"1": [{
+			"node": "2"
+		}],
+		"2": [{
+			"node": "3"
+		}],
+		"3": [{
+			"node": "4"
+		}],
+		"4": [{
+			"node": "5"
+		}]
+	}
+}
